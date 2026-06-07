@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>Pastelaria Bem Boa — Pastelaria, lanches e entregas no Kilamba</title>
+<link href='https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Karla:wght@400;600;800&display=swap' rel='stylesheet'>
+<style>
+:root{--bg:#FFF8EE;--card:#FFFFFF;--ink:#3F2D1E;--mut:#92816F;--acc:#C97B22;--acc2:#E8A958;--line:#F0E3D2}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.65}
+.dn{font-family:'Fraunces',serif}body{font-family:'Karla',sans-serif}
+nav{position:sticky;top:0;z-index:90;background:#FFF8EEe8;backdrop-filter:blur(10px);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:14px 5%}
+.logo{font-weight:800;font-size:18px;color:var(--ink);text-decoration:none}.logo b{color:var(--acc)}
+nav .nl{display:flex;gap:22px;align-items:center}
+nav a{color:var(--mut);text-decoration:none;font-size:14px;font-weight:600}
+nav a:hover{color:var(--acc)}
+.btn{display:inline-block;padding:13px 24px;border-radius:100px;font-weight:700;font-size:14.5px;text-decoration:none;transition:all .25s;border:1.5px solid transparent}
+.btn.p{background:var(--acc);color:#fff;box-shadow:0 12px 26px -12px var(--acc)}
+.btn.p:hover{background:var(--acc2);transform:translateY(-2px)}
+.btn.o{border-color:var(--acc);color:var(--acc)}
+header{position:relative;min-height:88vh;display:flex;align-items:center;padding:60px 5%}
+header .bgi{position:absolute;inset:0;background:url(https://lh3.googleusercontent.com/gps-cs-s/APNQkAGdR-yIs-iYSsTJlRFfYj4ZcCj4ioWuCrIwbOweApTUmKuBTXm1t5GJajeukEcqPF2j2jfDw-mEdhsj3SIa1AULFRoQl3Pa7Laz4H-TTLjRCQfbd2MNtdRug25pbjsNuXptVIGc=w1600-h1000-k-no) center/cover}
+header .ov{position:absolute;inset:0;background:linear-gradient(110deg,rgba(20,12,8,.72),rgba(20,12,8,.38))}
+.hin{position:relative;max-width:660px}
+.chip{display:inline-flex;background:#ffffffe6;color:#1A1A1A;padding:8px 16px;border-radius:100px;font-size:13px;font-weight:700}
+h1{font-size:clamp(40px,6vw,68px);line-height:1.04;color:#fff;margin:18px 0 16px}
+h1 .a2{color:var(--acc2)}
+.sub{color:#E8E5E0;font-size:17px;max-width:520px}
+.ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+section{padding:84px 5%}
+.kick{color:var(--acc);font-weight:800;font-size:12.5px;letter-spacing:.12em}
+h2{font-size:clamp(28px,3.6vw,40px);margin:8px 0 36px}
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;max-width:1150px;margin:0 auto}
+.wrap{max-width:1150px;margin:0 auto}
+.ec{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;padding-bottom:22px;transition:transform .25s}
+.ec:hover{transform:translateY(-5px)}
+.ec img{width:100%;height:200px;object-fit:cover;display:block;margin-bottom:16px}
+.ec h3{padding:0 22px;font-size:18.5px;margin-bottom:8px}
+.ec p{padding:0 22px;color:var(--mut);font-size:14.5px}
+.pi{display:flex;justify-content:space-between;align-items:baseline;gap:14px;padding:17px 4px;border-bottom:1px solid var(--line)}
+.pn{font-weight:700;font-size:16px}
+.pv{color:var(--acc);font-weight:800;white-space:nowrap}
+.disc{color:var(--mut);font-size:12.5px;margin-top:14px}
+.hwrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;max-width:1150px;margin:0 auto}
+.hi{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px}
+.hi b{display:block;color:var(--acc);margin-bottom:4px}
+.hi span{color:var(--mut);font-size:14px}
+.galeria{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;max-width:1150px;margin:0 auto}
+.galeria img{width:100%;height:230px;object-fit:cover;border-radius:14px}
+.rvs{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;max-width:1150px;margin:0 auto}
+.rv{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px}
+.stars{color:#F2A33C;letter-spacing:2px;margin-bottom:10px}
+.rv p{font-size:14.5px;margin-bottom:12px}
+.rv b{color:var(--mut);font-size:13px}
+.formbox{background:var(--card);border:1.5px solid var(--line);border-radius:20px;padding:34px;max-width:980px;margin:0 auto}
+.fg{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px}
+label{font-size:11.5px;font-weight:800;letter-spacing:.08em;color:var(--mut);display:block;margin-bottom:6px}
+input,select{width:100%;padding:13px 14px;border-radius:11px;border:1.5px solid var(--line);background:#FDFCFB;color:var(--ink);font-size:14.5px;font-family:inherit}
+input:focus,select:focus{outline:none;border-color:var(--acc)}
+.fbtn{grid-column:1/-1}
+.fbtn button{width:100%;border:none;cursor:pointer;padding:15px;border-radius:100px;background:var(--acc);color:#fff;font-weight:800;font-size:15px;font-family:inherit}
+.fbtn button:hover{background:var(--acc2)}
+.fnote{color:var(--mut);font-size:13px;margin-top:12px;text-align:center}
+.cont{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;max-width:1150px;margin:0 auto}
+.cb{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px}
+.cb b{color:var(--acc);display:block;margin-bottom:6px;font-size:13px;letter-spacing:.08em}
+.cb a{color:var(--ink);text-decoration:none;font-weight:700}
+footer{border-top:1px solid var(--line);padding:30px 5%;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;color:var(--mut);font-size:13.5px}
+footer a{color:var(--acc);text-decoration:none;font-weight:700}
+.wa-f{position:fixed;right:18px;bottom:18px;width:56px;height:56px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 26px -8px #25D366aa;z-index:95}
+.wa-f svg{width:30px;height:30px;fill:#fff}
+html.js .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s,transform .7s}
+html.js .reveal.in{opacity:1;transform:none}
+@media(max-width:760px){nav .nl a:not(.btn){display:none}section{padding:60px 5%}}
+</style>
+</head>
+<body>
+<nav><a class="logo" href="#">Pastelaria <b>Bem Boa</b></a>
+<div class="nl"><a href="#servicos">Serviços</a><a href="#precos">Preçário</a><a href="#galeria">Galeria</a><a href="#contactos">Contactos</a><a class="btn p" href="#marcar">Pedir já</a></div></nav>
+<header><div class="bgi"></div><div class="ov"></div>
+<div class="hin"><span class="chip">194 avaliações no Google · Kilamba · take-away e entrega</span>
+<h1 class="dn">A pausa bem boa<br><span class="a2">do Kilamba.</span></h1>
+<p class="sub">Pequenos-almoços, tostas, salgados e doces — desde sempre o ponto de encontro da Centralidade. Agora também com pedidos online.</p>
+<div class="ctas"><a class="btn p" href="#marcar">Pedir no WhatsApp</a><a class="btn o" href="https://wa.me/244923283830" target="_blank">Ver o menu</a></div></div></header>
+<section id="servicos"><div class="wrap"><span class="kick">OS QUERIDINHOS</span><h2 class="dn">O que toda a gente pede.</h2></div><div class="grid3"><div class="ec reveal"><img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAGfGzTC_nNHUUWWeZD8Pfz1zvflOv2JGvFIjlot3VhABQS9ErEeT3-97BvMpp-kPF6XEEdxmbca6yxfI7i2NXomuW30XWaIk4d1nj7ECigeop5ST9mg9BXQJ_jwwzgQT8fzBnhV=w900-h700-k-no" alt="Tosta mista" loading="lazy"><h3>Tosta mista</h3><p>O destaque do nosso menu no Google — simples, quente, perfeita.</p></div><div class="ec reveal"><img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAFNpRZ1c3PfHKnv8zRAvkJcJ37WB7S6xyG7lXHc0rPCu4fPseqyL7bKeds_CMc1ic0uYt6HW5se55EEaYwjK01lDvzEXx5cHSkvxKk4We6SUvZn8npAsyfn76m-WPRn3xn_R6Az=w900-h700-k-no" alt="Mousse de maracujá" loading="lazy"><h3>Mousse de maracujá</h3><p>A sobremesa com fama na Centralidade. Fotografada aqui mesmo.</p></div><div class="ec reveal"><img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAG1-q77i7ULtW1N0T1_xsx6FHW1B-qrOe__zqEUOXpxxNyTZQdHHWGrj2MCYykluSfoTex_oLosDZwBGGk6REnf0ZDUexKm9WP3tDZxLFLZFWKfxgWoJCb7bFl0wHAVzUxupDbY=w900-h700-k-no" alt="Pequeno-almoço completo" loading="lazy"><h3>Pequeno-almoço completo</h3><p>Omeletes, pão fresco e café — o arranque bem bom do teu dia.</p></div></div></section>
+<section id="precos" style="padding-top:30px"><div class="wrap"><span class="kick">MENU</span><h2 class="dn">Bom e barato, como deve ser.</h2><div class="pi reveal"><div><div class="pn">Tosta mista</div></div><div class="pv">desde 2.500 Kz</div></div><div class="pi reveal"><div><div class="pn">Mousse de maracujá</div></div><div class="pv">desde 2.000 Kz</div></div><div class="pi reveal"><div><div class="pn">Omelete + pão + café</div></div><div class="pv">desde 3.500 Kz</div></div><div class="pi reveal"><div><div class="pn">Hambúrguer da casa</div></div><div class="pv">desde 3.800 Kz</div></div><div class="pi reveal"><div><div class="pn">Salgados (unidade)</div></div><div class="pv">desde 500 Kz</div></div><p class="disc">* Valores de demonstração — a confirmar pela casa.</p></div></section>
+<section style="padding-top:20px"><div class="wrap"><span class="kick">HORÁRIOS</span><h2 class="dn">Quando estamos cá para ti.</h2></div><div class="hwrap"><div class="hi reveal"><b>Seg–Dom</b><span>07:00 – 21:00</span></div><div class="hi reveal"><b>Entrega</b><span>Pelo WhatsApp, zona do Kilamba</span></div><div class="hi reveal"><b>Encomendas para festas</b><span>Fala connosco</span></div></div></section>
+<section id="galeria" style="padding-top:20px"><div class="wrap"><span class="kick">GALERIA</span><h2 class="dn">Espreita lá para dentro.</h2></div><div class="galeria"><img class="reveal" src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAFNpRZ1c3PfHKnv8zRAvkJcJ37WB7S6xyG7lXHc0rPCu4fPseqyL7bKeds_CMc1ic0uYt6HW5se55EEaYwjK01lDvzEXx5cHSkvxKk4We6SUvZn8npAsyfn76m-WPRn3xn_R6Az=w900-h700-k-no" alt="Pastelaria Bem Boa" loading="lazy"><img class="reveal" src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAE2UJdonxqVfx-bUF6qg-cCYoqVqNHZCmiGaJcE34VY3mYCuzZPI8Oy7bjnnpf2TLn_tD42plNqe_209X51J1F36cXcWT8tLXzO8sbrauFKfywNmyH1l4jt-mAvzSWMQleADzxd-88Y5cM=w900-h700-k-no" alt="Pastelaria Bem Boa" loading="lazy"><img class="reveal" src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAGfGzTC_nNHUUWWeZD8Pfz1zvflOv2JGvFIjlot3VhABQS9ErEeT3-97BvMpp-kPF6XEEdxmbca6yxfI7i2NXomuW30XWaIk4d1nj7ECigeop5ST9mg9BXQJ_jwwzgQT8fzBnhV=w900-h700-k-no" alt="Pastelaria Bem Boa" loading="lazy"><img class="reveal" src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAG1-q77i7ULtW1N0T1_xsx6FHW1B-qrOe__zqEUOXpxxNyTZQdHHWGrj2MCYykluSfoTex_oLosDZwBGGk6REnf0ZDUexKm9WP3tDZxLFLZFWKfxgWoJCb7bFl0wHAVzUxupDbY=w900-h700-k-no" alt="Pastelaria Bem Boa" loading="lazy"></div></section>
+<section style="padding-top:20px"><div class="wrap"><span class="kick">AVALIAÇÕES</span><h2 class="dn">Quem cá vem, volta.</h2></div><div class="rvs"><div class="rv reveal"><div class="stars">★★★★★</div><p>“O hambúrguer aqui é muito bom, as batatas fritas frescas.”</p><b>Cliente Google</b></div><div class="rv reveal"><div class="stars">★★★★★</div><p>“Ponto de encontro de sempre no Kilamba.”</p><b>Cliente Google</b></div><div class="rv reveal"><div class="stars">★★★★★</div><p>“Doces deliciosos e bom atendimento.”</p><b>Cliente Google</b></div></div></section>
+<section id="marcar" style="padding-top:20px"><div class="wrap"><span class="kick">PEDIDO ONLINE</span><h2 class="dn">Pede agora, levanta já.</h2></div>
+<div class="formbox"><form id="mf"><div class="fg">
+<div><label>NOME</label><input id="fNome" placeholder="O teu nome" required></div>
+<div><label>SERVIÇO</label><select id="fSvc"><option>Take-away</option><option>Entrega</option><option>Reserva de mesa</option><option>Encomenda para festa</option></select></div>
+<div><label>DATA</label><input id="fData" type="date" required></div>
+<div><label>HORA</label><select id="fHora"><option>09:00</option><option>10:00</option><option>11:00</option><option>12:00</option><option>14:00</option><option>15:00</option><option>16:00</option><option>17:00</option><option>18:00</option></select></div>
+<div class="fbtn"><button type="submit">Confirmar</button></div>
+</div></form><p class="fnote">A confirmação chega em minutos pelo WhatsApp da casa.</p></div></section>
+<section id="contactos" style="padding-top:20px"><div class="wrap"><span class="kick">CONTACTOS</span><h2 class="dn">Fala connosco.</h2></div>
+<div class="cont">
+<div class="cb"><b>TELEFONE / WHATSAPP</b><a href="tel:+244923283830">+244 923 283 830</a></div>
+<div class="cb"><b>ONDE ESTAMOS</b><a href="https://www.google.com/maps/search/Pastelaria+Bem+Boa+Kilamba" target="_blank">Centralidade do Kilamba</a></div>
+<div class="cb"><b>HORÁRIO</b>Todos os dias · 07:00–21:00</div>
+</div></section>
+<footer><span>© 2026 Pastelaria Bem Boa · Luanda, Angola</span><span>Website por <a href="https://bknacao.net" target="_blank">BK Nação</a></span></footer>
+<a class="wa-f" href="https://wa.me/244923283830" target="_blank" aria-label="WhatsApp"><svg viewBox="0 0 32 32"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.1.6 4.2 1.6 6L4 29l8.2-1.5c1.2.6 2.5.9 3.8.9 6.6 0 12-5.4 12-12S22.6 3 16 3zm0 22c-1.2 0-2.4-.3-3.5-.8l-.6-.3-4.9.9.9-4.7-.3-.6C6.6 18 6 16.5 6 15 6 9.5 10.5 5 16 5s10 4.5 10 10-4.5 10-10 10zm5.5-7.4c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.6c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.6 0-.2-.7-1.7-1-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.7s1.2 3.1 1.3 3.3c.2.2 2.3 3.5 5.5 4.9.8.3 1.4.5 1.9.7.8.2 1.5.2 2 .1.6-.1 1.8-.7 2.1-1.5.3-.7.3-1.3.2-1.5-.1-.1-.3-.2-.6-.4z"/></svg></a>
+<script>
+document.documentElement.classList.add('js');
+var NL=String.fromCharCode(10);
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'-8%'});
+document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+setTimeout(function(){document.querySelectorAll('.reveal:not(.in)').forEach(function(el){el.classList.add('in')})},2600);
+document.getElementById('mf').addEventListener('submit',function(ev){ev.preventDefault();
+var n=document.getElementById('fNome').value||'';var s=document.getElementById('fSvc').value;var d=document.getElementById('fData').value;var h=document.getElementById('fHora').value;
+var dd=d?d.split('-').reverse().join('/'):'';
+var t='Olá! Queria fazer um pedido na Bem Boa.'+NL+'Nome: '+n+NL+'Servico: '+s+NL+'Data: '+dd+NL+'Hora: '+h;
+window.open('https://wa.me/244923283830?text='+encodeURIComponent(t),'_blank');});
+</script>
+</body>
+</html>
