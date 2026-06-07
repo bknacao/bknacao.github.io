@@ -47,6 +47,9 @@ h2{font-size:clamp(28px,3.6vw,40px);margin:8px 0 36px}
 .hi{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px}
 .hi b{display:block;color:var(--acc);margin-bottom:4px}
 .hi span{color:var(--mut);font-size:14px}
+.st{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;text-align:center}
+.st b{display:block;font-size:26px;color:var(--acc)}
+.st span{color:var(--mut);font-size:13px}
 .galeria{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;max-width:1150px;margin:0 auto}
 .galeria img{width:100%;height:230px;object-fit:cover;border-radius:14px}
 .rvs{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;max-width:1150px;margin:0 auto}
@@ -71,7 +74,24 @@ footer{border-top:1px solid var(--line);padding:30px 5%;display:flex;justify-con
 footer a{color:var(--acc);text-decoration:none;font-weight:700}
 .wa-f{position:fixed;right:18px;bottom:18px;width:56px;height:56px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 26px -8px #25D366aa;z-index:95}
 .wa-f svg{width:30px;height:30px;fill:#fff}
-html.js .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s,transform .7s}
+header{overflow:hidden}
+header .bgi{animation:kb 16s ease-out both}
+@keyframes kb{from{transform:scale(1.1)}to{transform:scale(1)}}
+@keyframes fup{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+.hin .chip{animation:fup .8s .15s both}
+.hin h1{animation:fup .9s .3s both}
+.hin .sub{animation:fup .9s .5s both}
+.hin .ctas{animation:fup .9s .7s both}
+.ec img,.galeria img{transition:transform .55s ease}
+.ec:hover img{transform:scale(1.07)}
+.galeria img:hover{transform:scale(1.04)}
+.galeria{overflow:hidden}
+.btn{position:relative}
+.btn.p:active{transform:scale(.97)}
+nav.sc{box-shadow:0 10px 30px -18px rgba(0,0,0,.5)}
+.wa-f{animation:wapulse 2.6s ease-in-out infinite}
+@keyframes wapulse{0%,100%{box-shadow:0 12px 26px -8px #25D366aa}50%{box-shadow:0 12px 32px -4px #25D366cc}}
+html.js .reveal{opacity:0;transform:translateY(26px);transition:opacity .75s cubic-bezier(.2,.7,.3,1),transform .75s cubic-bezier(.2,.7,.3,1)}
 html.js .reveal.in{opacity:1;transform:none}
 @media(max-width:760px){nav .nl a:not(.btn){display:none}section{padding:60px 5%}}
 </style>
@@ -84,12 +104,16 @@ html.js .reveal.in{opacity:1;transform:none}
 <h1 class="dn">O grill que o Kilamba<br><span class="a2">conhece de cor.</span></h1>
 <p class="sub">Um dos restaurantes mais avaliados da Centralidade. Grelhados, pratos do dia e entrega — agora com reserva online.</p>
 <div class="ctas"><a class="btn p" href="#marcar">Reservar mesa</a><a class="btn o" href="https://wa.me/244949040091" target="_blank">Pedir no WhatsApp</a></div></div></header>
-<section id="servicos"><div class="wrap"><span class="kick">OS FAVORITOS</span><h2 class="dn">Pedidos de olhos fechados.</h2></div><div class="grid3"><div class="ec reveal"><img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAFCdpHpMIt2poLtv2nKnJqufqCrSgFgqutTwAnI2CWRmIxo2azBaRTruXshU4kQHIbDM_pgQtC8KP_tsyZJxZbZnINzmJ4cViCd4hATNNJwf7m6a1xB6DmeYMz0gE2O7H3co44=w900-h700-k-no" alt="Bife de lombo na pedra" loading="lazy"><h3>Bife de lombo na pedra</h3><p>O clássico da casa — chega a chiar à mesa. Fotografado aqui mesmo.</p></div><div class="ec reveal"><img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAG6yIlX2-LNXTyoaI98QJCLwYgy4_Bb58UxMyaRx3aKNLugHKrUAvKPi5iQCfjwVCARHgsfdBEC1xub0XvMh1NGctfvU5wjvKXdFmUq0zuvXSgIKAKTDCEazFeDxkalhUqppchF=w900-h700-k-no" alt="Frango à parmegiana" loading="lazy"><h3>Frango à parmegiana</h3><p>O destaque do nosso menu no Google — pergunta a quem já provou.</p></div><div class="ec reveal"><img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAG25ZlCfVtYGqyYb3LmpDdf2MhHV3lQcNNaoY9JOGrFeonZXChCm42RvOM-BUHHi6aNq2WtvJzUsJrDXjrbc02k1DDzIvRG1VkSeF4_MDPZl28nrY7MPWVXpqrePXl9nwRrKjsi=w900-h700-k-no" alt="Sumos naturais" loading="lazy"><h3>Sumos naturais</h3><p>Melancia, múcua, manga — feitos na hora, como deve ser.</p></div></div></section>
-<section id="precos" style="padding-top:30px"><div class="wrap"><span class="kick">MENU</span><h2 class="dn">Preços diretos, comida a sério.</h2><div class="pi reveal"><div><div class="pn">Bife de lombo grelhado na pedra</div></div><div class="pv">desde 9.500 Kz</div></div><div class="pi reveal"><div><div class="pn">Frango à parmegiana</div></div><div class="pv">desde 7.500 Kz</div></div><div class="pi reveal"><div><div class="pn">Grelhada mista (2 pessoas)</div></div><div class="pv">desde 16.000 Kz</div></div><div class="pi reveal"><div><div class="pn">Prato do dia (almoço)</div></div><div class="pv">desde 4.500 Kz</div></div><div class="pi reveal"><div><div class="pn">Sumos naturais</div></div><div class="pv">desde 1.500 Kz</div></div><p class="disc">* Valores de demonstração — a confirmar pela casa.</p></div></section>
+<section style="padding:26px 5%"><div class="wrap" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px"><div class="st reveal"><b class="dn">197</b><span>avaliações no Google</span></div><div class="st reveal"><b class="dn">€€</b><span>bom e acessível</span></div><div class="st reveal"><b class="dn">22h</b><span>aberto todos os dias</span></div></div></section>
+<section id="servicos"><div class="wrap"><span class="kick">OS FAVORITOS</span><h2 class="dn">Pedidos de olhos fechados.</h2></div><div class="grid3"><div class="ec reveal"><img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAFCdpHpMIt2poLtv2nKnJqufqCrSgFgqutTwAnI2CWRmIxo2azBaRTruXshU4kQHIbDM_pgQtC8KP_tsyZJxZbZnINzmJ4cViCd4hATNNJwf7m6a1xB6DmeYMz0gE2O7H3co44=w900-h700-k-no" alt="Bife de lombo na pedra" loading="lazy"><h3>Bife de lombo na pedra</h3><p>O clássico da casa — chega a chiar à mesa. Fotografado aqui mesmo.</p></div><div class="ec reveal"><img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAG6yIlX2-LNXTyoaI98QJCLwYgy4_Bb58UxMyaRx3aKNLugHKrUAvKPi5iQCfjwVCARHgsfdBEC1xub0XvMh1NGctfvU5wjvKXdFmUq0zuvXSgIKAKTDCEazFeDxkalhUqppchF=w900-h700-k-no" alt="Frango à parmegiana" loading="lazy"><h3>Frango à parmegiana</h3><p>O destaque do nosso menu no Google — pergunta a quem já provou.</p></div><div class="ec reveal"><img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAG25ZlCfVtYGqyYb3LmpDdf2MhHV3lQcNNaoY9JOGrFeonZXChCm42RvOM-BUHHi6aNq2WtvJzUsJrDXjrbc02k1DDzIvRG1VkSeF4_MDPZl28nrY7MPWVXpqrePXl9nwRrKjsi=w900-h700-k-no" alt="Jogo + fino fresco" loading="lazy"><h3>Jogo + fino fresco</h3><p>Futebol no ecrã, cerveja gelada e amigos — as críticas no Google confirmam.</p></div></div></section>
+<section id="precos" style="padding-top:30px"><div class="wrap"><span class="kick">MENU</span><h2 class="dn">Preços diretos, comida a sério.</h2><div class="pi reveal"><div><div class="pn">Bife de lombo grelhado na pedra</div></div><div class="pv">desde 9.500 Kz</div></div><div class="pi reveal"><div><div class="pn">Frango à parmegiana</div></div><div class="pv">desde 7.500 Kz</div></div><div class="pi reveal"><div><div class="pn">Grelhada mista (2 pessoas)</div></div><div class="pv">desde 16.000 Kz</div></div><div class="pi reveal"><div><div class="pn">Prato do dia (almoço)</div></div><div class="pv">desde 4.500 Kz</div></div><div class="pi reveal"><div><div class="pn">Sumos naturais</div></div><div class="pv">desde 1.500 Kz</div></div><div class="pi reveal"><div><div class="pn">Fino (imperial) fresco</div></div><div class="pv">desde 800 Kz</div></div><div class="pi reveal"><div><div class="pn">Batata frita da casa</div></div><div class="pv">desde 2.000 Kz</div></div><p class="disc">* Valores de demonstração — a confirmar pela casa.</p></div></section>
 <section style="padding-top:20px"><div class="wrap"><span class="kick">HORÁRIOS</span><h2 class="dn">Quando estamos cá para ti.</h2></div><div class="hwrap"><div class="hi reveal"><b>Seg–Dom</b><span>11:30 – 22:00</span></div><div class="hi reveal"><b>Entrega</b><span>Pelo WhatsApp, zona do Kilamba</span></div><div class="hi reveal"><b>Grupos & eventos</b><span>Fala connosco</span></div></div></section>
 <section id="galeria" style="padding-top:20px"><div class="wrap"><span class="kick">GALERIA</span><h2 class="dn">Espreita lá para dentro.</h2></div><div class="galeria"><img class="reveal" src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAG6yIlX2-LNXTyoaI98QJCLwYgy4_Bb58UxMyaRx3aKNLugHKrUAvKPi5iQCfjwVCARHgsfdBEC1xub0XvMh1NGctfvU5wjvKXdFmUq0zuvXSgIKAKTDCEazFeDxkalhUqppchF=w900-h700-k-no" alt="GEP Restaurante Grill" loading="lazy"><img class="reveal" src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAHRIRyGHiofG0tABLw1385k_VC8pRHS09ki3oQ4uaO2saOM81z9D7hXWPhNQ20issB35FDFhJH4ZlThPWflAoPVjDR_r3DwsitlsbJ7a6svxsXqy4hdvz8rNELnB1mooGSBfNEL=w900-h700-k-no" alt="GEP Restaurante Grill" loading="lazy"><img class="reveal" src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAG25ZlCfVtYGqyYb3LmpDdf2MhHV3lQcNNaoY9JOGrFeonZXChCm42RvOM-BUHHi6aNq2WtvJzUsJrDXjrbc02k1DDzIvRG1VkSeF4_MDPZl28nrY7MPWVXpqrePXl9nwRrKjsi=w900-h700-k-no" alt="GEP Restaurante Grill" loading="lazy"></div></section>
-<section style="padding-top:20px"><div class="wrap"><span class="kick">AVALIAÇÕES</span><h2 class="dn">Quem cá vem, volta.</h2></div><div class="rvs"><div class="rv reveal"><div class="stars">★★★★★</div><p>“Um dos melhores restaurantes do Kilamba!”</p><b>Cliente Google</b></div><div class="rv reveal"><div class="stars">★★★★★</div><p>“Comida boa e bem servida, atendimento rápido.”</p><b>Cliente Google</b></div><div class="rv reveal"><div class="stars">★★★★★</div><p>“O bife na pedra vale cada kwanza.”</p><b>Cliente Google</b></div></div></section>
-<section id="marcar" style="padding-top:20px"><div class="wrap"><span class="kick">RESERVA ONLINE</span><h2 class="dn">Garante a tua mesa.</h2></div>
+<section style="padding-top:20px"><div class="wrap"><span class="kick">AVALIAÇÕES</span><h2 class="dn">Quem cá vem, volta.</h2></div><div class="rvs"><div class="rv reveal"><div class="stars">★★★★★</div><p>“É um lugar bom para ir com os amigos assistir um jogo de futebol, beber uma cerveja… Muito divertido.”</p><b>TINB, Guia Local</b></div><div class="rv reveal"><div class="stars">★★★★★</div><p>“O espaço é ótimo, ambiente agradável, a comida é ótima — o fino então, bem fresquinho!”</p><b>Alberto C.</b></div><div class="rv reveal"><div class="stars">★★★★★</div><p>“Um dos melhores restaurantes do Kilamba!”</p><b>Cliente Google</b></div></div></section>
+<section style="padding:0 5%"><div class="wrap" style="background:linear-gradient(120deg,var(--acc),var(--acc2));border-radius:20px;padding:38px 34px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap">
+<div><h2 class="dn" style="color:#fff;margin:0 0 6px;font-size:26px">Sábado de jogo? A tua mesa já tem dono.</h2><p style="color:#ffffffd9;font-size:14.5px;margin:0">Ecrã grande, fino fresco e o melhor grill do Kilamba — reserva antes que encha.</p></div>
+<a class="btn" href="#marcar" style="background:#fff;color:var(--acc);border:none;font-weight:800">Reservar mesa</a></div></section>
+<section id="marcar" style="padding-top:50px"><div class="wrap"><span class="kick">RESERVA ONLINE</span><h2 class="dn">Garante a tua mesa.</h2></div>
 <div class="formbox"><form id="mf"><div class="fg">
 <div><label>NOME</label><input id="fNome" placeholder="O teu nome" required></div>
 <div><label>SERVIÇO</label><select id="fSvc"><option>Mesa para 2</option><option>Mesa para 4</option><option>Mesa para 6+</option><option>Take-away / entrega</option></select></div>
@@ -109,7 +133,10 @@ html.js .reveal.in{opacity:1;transform:none}
 document.documentElement.classList.add('js');
 var NL=String.fromCharCode(10);
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'-8%'});
-document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+document.querySelectorAll('section').forEach(function(sec){var rs=sec.querySelectorAll('.reveal');rs.forEach(function(el,i){el.style.transitionDelay=(i%6)*90+'ms';io.observe(el)})});
+var nv=document.querySelector('nav');window.addEventListener('scroll',function(){nv.classList.toggle('sc',scrollY>40)},{passive:true});
+var cio=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;cio.unobserve(e.target);var el=e.target;var m=(el.textContent||'').match(/^([0-9]{2,4})$/);if(!m)return;var alvo=parseInt(m[1],10);var t0=null;function passo(ts){if(!t0)t0=ts;var p=Math.min((ts-t0)/1200,1);el.textContent=Math.round(alvo*(p<.5?2*p*p:-1+(4-2*p)*p));if(p<1)requestAnimationFrame(passo);else el.textContent=alvo}requestAnimationFrame(passo)})},{threshold:.6});
+document.querySelectorAll('.st b').forEach(function(el){cio.observe(el)});
 setTimeout(function(){document.querySelectorAll('.reveal:not(.in)').forEach(function(el){el.classList.add('in')})},2600);
 document.getElementById('mf').addEventListener('submit',function(ev){ev.preventDefault();
 var n=document.getElementById('fNome').value||'';var s=document.getElementById('fSvc').value;var d=document.getElementById('fData').value;var h=document.getElementById('fHora').value;

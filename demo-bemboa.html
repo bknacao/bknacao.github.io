@@ -47,6 +47,9 @@ h2{font-size:clamp(28px,3.6vw,40px);margin:8px 0 36px}
 .hi{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px}
 .hi b{display:block;color:var(--acc);margin-bottom:4px}
 .hi span{color:var(--mut);font-size:14px}
+.st{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;text-align:center}
+.st b{display:block;font-size:26px;color:var(--acc)}
+.st span{color:var(--mut);font-size:13px}
 .galeria{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;max-width:1150px;margin:0 auto}
 .galeria img{width:100%;height:230px;object-fit:cover;border-radius:14px}
 .rvs{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;max-width:1150px;margin:0 auto}
@@ -71,7 +74,24 @@ footer{border-top:1px solid var(--line);padding:30px 5%;display:flex;justify-con
 footer a{color:var(--acc);text-decoration:none;font-weight:700}
 .wa-f{position:fixed;right:18px;bottom:18px;width:56px;height:56px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 26px -8px #25D366aa;z-index:95}
 .wa-f svg{width:30px;height:30px;fill:#fff}
-html.js .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s,transform .7s}
+header{overflow:hidden}
+header .bgi{animation:kb 16s ease-out both}
+@keyframes kb{from{transform:scale(1.1)}to{transform:scale(1)}}
+@keyframes fup{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+.hin .chip{animation:fup .8s .15s both}
+.hin h1{animation:fup .9s .3s both}
+.hin .sub{animation:fup .9s .5s both}
+.hin .ctas{animation:fup .9s .7s both}
+.ec img,.galeria img{transition:transform .55s ease}
+.ec:hover img{transform:scale(1.07)}
+.galeria img:hover{transform:scale(1.04)}
+.galeria{overflow:hidden}
+.btn{position:relative}
+.btn.p:active{transform:scale(.97)}
+nav.sc{box-shadow:0 10px 30px -18px rgba(0,0,0,.5)}
+.wa-f{animation:wapulse 2.6s ease-in-out infinite}
+@keyframes wapulse{0%,100%{box-shadow:0 12px 26px -8px #25D366aa}50%{box-shadow:0 12px 32px -4px #25D366cc}}
+html.js .reveal{opacity:0;transform:translateY(26px);transition:opacity .75s cubic-bezier(.2,.7,.3,1),transform .75s cubic-bezier(.2,.7,.3,1)}
 html.js .reveal.in{opacity:1;transform:none}
 @media(max-width:760px){nav .nl a:not(.btn){display:none}section{padding:60px 5%}}
 </style>
@@ -84,12 +104,16 @@ html.js .reveal.in{opacity:1;transform:none}
 <h1 class="dn">A pausa bem boa<br><span class="a2">do Kilamba.</span></h1>
 <p class="sub">Pequenos-almoços, tostas, salgados e doces — desde sempre o ponto de encontro da Centralidade. Agora também com pedidos online.</p>
 <div class="ctas"><a class="btn p" href="#marcar">Pedir no WhatsApp</a><a class="btn o" href="https://wa.me/244923283830" target="_blank">Ver o menu</a></div></div></header>
-<section id="servicos"><div class="wrap"><span class="kick">OS QUERIDINHOS</span><h2 class="dn">O que toda a gente pede.</h2></div><div class="grid3"><div class="ec reveal"><img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAGfGzTC_nNHUUWWeZD8Pfz1zvflOv2JGvFIjlot3VhABQS9ErEeT3-97BvMpp-kPF6XEEdxmbca6yxfI7i2NXomuW30XWaIk4d1nj7ECigeop5ST9mg9BXQJ_jwwzgQT8fzBnhV=w900-h700-k-no" alt="Tosta mista" loading="lazy"><h3>Tosta mista</h3><p>O destaque do nosso menu no Google — simples, quente, perfeita.</p></div><div class="ec reveal"><img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAFNpRZ1c3PfHKnv8zRAvkJcJ37WB7S6xyG7lXHc0rPCu4fPseqyL7bKeds_CMc1ic0uYt6HW5se55EEaYwjK01lDvzEXx5cHSkvxKk4We6SUvZn8npAsyfn76m-WPRn3xn_R6Az=w900-h700-k-no" alt="Mousse de maracujá" loading="lazy"><h3>Mousse de maracujá</h3><p>A sobremesa com fama na Centralidade. Fotografada aqui mesmo.</p></div><div class="ec reveal"><img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAG1-q77i7ULtW1N0T1_xsx6FHW1B-qrOe__zqEUOXpxxNyTZQdHHWGrj2MCYykluSfoTex_oLosDZwBGGk6REnf0ZDUexKm9WP3tDZxLFLZFWKfxgWoJCb7bFl0wHAVzUxupDbY=w900-h700-k-no" alt="Pequeno-almoço completo" loading="lazy"><h3>Pequeno-almoço completo</h3><p>Omeletes, pão fresco e café — o arranque bem bom do teu dia.</p></div></div></section>
+<section style="padding:26px 5%"><div class="wrap" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px"><div class="st reveal"><b class="dn">194</b><span>avaliações no Google</span></div><div class="st reveal"><b class="dn">11x</b><span>pequeno-almoço elogiado nas críticas</span></div><div class="st reveal"><b class="dn">07h</b><span>abrimos cedinho, todos os dias</span></div></div></section>
+<section id="servicos"><div class="wrap"><span class="kick">OS QUERIDINHOS</span><h2 class="dn">O que toda a gente pede.</h2></div><div class="grid3"><div class="ec reveal"><img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAGfGzTC_nNHUUWWeZD8Pfz1zvflOv2JGvFIjlot3VhABQS9ErEeT3-97BvMpp-kPF6XEEdxmbca6yxfI7i2NXomuW30XWaIk4d1nj7ECigeop5ST9mg9BXQJ_jwwzgQT8fzBnhV=w900-h700-k-no" alt="Tosta mista" loading="lazy"><h3>Tosta mista</h3><p>O destaque do nosso menu no Google — simples, quente, perfeita.</p></div><div class="ec reveal"><img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAFNpRZ1c3PfHKnv8zRAvkJcJ37WB7S6xyG7lXHc0rPCu4fPseqyL7bKeds_CMc1ic0uYt6HW5se55EEaYwjK01lDvzEXx5cHSkvxKk4We6SUvZn8npAsyfn76m-WPRn3xn_R6Az=w900-h700-k-no" alt="Mousse de maracujá" loading="lazy"><h3>Mousse de maracujá</h3><p>A sobremesa com fama na Centralidade. Fotografada aqui mesmo.</p></div><div class="ec reveal"><img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAG1-q77i7ULtW1N0T1_xsx6FHW1B-qrOe__zqEUOXpxxNyTZQdHHWGrj2MCYykluSfoTex_oLosDZwBGGk6REnf0ZDUexKm9WP3tDZxLFLZFWKfxgWoJCb7bFl0wHAVzUxupDbY=w900-h700-k-no" alt="O pequeno-almoço famoso" loading="lazy"><h3>O pequeno-almoço famoso</h3><p>Mencionado 11 vezes nas críticas do Google — omeletes, pão fresco e café.</p></div></div></section>
 <section id="precos" style="padding-top:30px"><div class="wrap"><span class="kick">MENU</span><h2 class="dn">Bom e barato, como deve ser.</h2><div class="pi reveal"><div><div class="pn">Tosta mista</div></div><div class="pv">desde 2.500 Kz</div></div><div class="pi reveal"><div><div class="pn">Mousse de maracujá</div></div><div class="pv">desde 2.000 Kz</div></div><div class="pi reveal"><div><div class="pn">Omelete + pão + café</div></div><div class="pv">desde 3.500 Kz</div></div><div class="pi reveal"><div><div class="pn">Hambúrguer da casa</div></div><div class="pv">desde 3.800 Kz</div></div><div class="pi reveal"><div><div class="pn">Salgados (unidade)</div></div><div class="pv">desde 500 Kz</div></div><p class="disc">* Valores de demonstração — a confirmar pela casa.</p></div></section>
 <section style="padding-top:20px"><div class="wrap"><span class="kick">HORÁRIOS</span><h2 class="dn">Quando estamos cá para ti.</h2></div><div class="hwrap"><div class="hi reveal"><b>Seg–Dom</b><span>07:00 – 21:00</span></div><div class="hi reveal"><b>Entrega</b><span>Pelo WhatsApp, zona do Kilamba</span></div><div class="hi reveal"><b>Encomendas para festas</b><span>Fala connosco</span></div></div></section>
 <section id="galeria" style="padding-top:20px"><div class="wrap"><span class="kick">GALERIA</span><h2 class="dn">Espreita lá para dentro.</h2></div><div class="galeria"><img class="reveal" src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAFNpRZ1c3PfHKnv8zRAvkJcJ37WB7S6xyG7lXHc0rPCu4fPseqyL7bKeds_CMc1ic0uYt6HW5se55EEaYwjK01lDvzEXx5cHSkvxKk4We6SUvZn8npAsyfn76m-WPRn3xn_R6Az=w900-h700-k-no" alt="Pastelaria Bem Boa" loading="lazy"><img class="reveal" src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAE2UJdonxqVfx-bUF6qg-cCYoqVqNHZCmiGaJcE34VY3mYCuzZPI8Oy7bjnnpf2TLn_tD42plNqe_209X51J1F36cXcWT8tLXzO8sbrauFKfywNmyH1l4jt-mAvzSWMQleADzxd-88Y5cM=w900-h700-k-no" alt="Pastelaria Bem Boa" loading="lazy"><img class="reveal" src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAGfGzTC_nNHUUWWeZD8Pfz1zvflOv2JGvFIjlot3VhABQS9ErEeT3-97BvMpp-kPF6XEEdxmbca6yxfI7i2NXomuW30XWaIk4d1nj7ECigeop5ST9mg9BXQJ_jwwzgQT8fzBnhV=w900-h700-k-no" alt="Pastelaria Bem Boa" loading="lazy"><img class="reveal" src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAG1-q77i7ULtW1N0T1_xsx6FHW1B-qrOe__zqEUOXpxxNyTZQdHHWGrj2MCYykluSfoTex_oLosDZwBGGk6REnf0ZDUexKm9WP3tDZxLFLZFWKfxgWoJCb7bFl0wHAVzUxupDbY=w900-h700-k-no" alt="Pastelaria Bem Boa" loading="lazy"></div></section>
-<section style="padding-top:20px"><div class="wrap"><span class="kick">AVALIAÇÕES</span><h2 class="dn">Quem cá vem, volta.</h2></div><div class="rvs"><div class="rv reveal"><div class="stars">★★★★★</div><p>“O hambúrguer aqui é muito bom, as batatas fritas frescas.”</p><b>Cliente Google</b></div><div class="rv reveal"><div class="stars">★★★★★</div><p>“Ponto de encontro de sempre no Kilamba.”</p><b>Cliente Google</b></div><div class="rv reveal"><div class="stars">★★★★★</div><p>“Doces deliciosos e bom atendimento.”</p><b>Cliente Google</b></div></div></section>
-<section id="marcar" style="padding-top:20px"><div class="wrap"><span class="kick">PEDIDO ONLINE</span><h2 class="dn">Pede agora, levanta já.</h2></div>
+<section style="padding-top:20px"><div class="wrap"><span class="kick">AVALIAÇÕES</span><h2 class="dn">Quem cá vem, volta.</h2></div><div class="rvs"><div class="rv reveal"><div class="stars">★★★★★</div><p>“Toda a gente foi simpática — o hambúrguer aqui é muito bom e as batatas fritas frescas!”</p><b>Shanequa S.</b></div><div class="rv reveal"><div class="stars">★★★★★</div><p>“O pequeno-almoço de sempre no Kilamba.”</p><b>Cliente Google</b></div><div class="rv reveal"><div class="stars">★★★★★</div><p>“A mousse de maracujá é obrigatória.”</p><b>Cliente Google</b></div></div></section>
+<section style="padding:0 5%"><div class="wrap" style="background:linear-gradient(120deg,var(--acc),var(--acc2));border-radius:20px;padding:38px 34px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap">
+<div><h2 class="dn" style="color:#fff;margin:0 0 6px;font-size:26px">O pequeno-almoço favorito do Kilamba.</h2><p style="color:#ffffffd9;font-size:14.5px;margin:0">Mencionado 11 vezes nas críticas do Google — pede pelo WhatsApp e levanta sem fila.</p></div>
+<a class="btn" href="#marcar" style="background:#fff;color:var(--acc);border:none;font-weight:800">Pedir no WhatsApp</a></div></section>
+<section id="marcar" style="padding-top:50px"><div class="wrap"><span class="kick">PEDIDO ONLINE</span><h2 class="dn">Pede agora, levanta já.</h2></div>
 <div class="formbox"><form id="mf"><div class="fg">
 <div><label>NOME</label><input id="fNome" placeholder="O teu nome" required></div>
 <div><label>SERVIÇO</label><select id="fSvc"><option>Take-away</option><option>Entrega</option><option>Reserva de mesa</option><option>Encomenda para festa</option></select></div>
@@ -109,7 +133,10 @@ html.js .reveal.in{opacity:1;transform:none}
 document.documentElement.classList.add('js');
 var NL=String.fromCharCode(10);
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'-8%'});
-document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+document.querySelectorAll('section').forEach(function(sec){var rs=sec.querySelectorAll('.reveal');rs.forEach(function(el,i){el.style.transitionDelay=(i%6)*90+'ms';io.observe(el)})});
+var nv=document.querySelector('nav');window.addEventListener('scroll',function(){nv.classList.toggle('sc',scrollY>40)},{passive:true});
+var cio=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;cio.unobserve(e.target);var el=e.target;var m=(el.textContent||'').match(/^([0-9]{2,4})$/);if(!m)return;var alvo=parseInt(m[1],10);var t0=null;function passo(ts){if(!t0)t0=ts;var p=Math.min((ts-t0)/1200,1);el.textContent=Math.round(alvo*(p<.5?2*p*p:-1+(4-2*p)*p));if(p<1)requestAnimationFrame(passo);else el.textContent=alvo}requestAnimationFrame(passo)})},{threshold:.6});
+document.querySelectorAll('.st b').forEach(function(el){cio.observe(el)});
 setTimeout(function(){document.querySelectorAll('.reveal:not(.in)').forEach(function(el){el.classList.add('in')})},2600);
 document.getElementById('mf').addEventListener('submit',function(ev){ev.preventDefault();
 var n=document.getElementById('fNome').value||'';var s=document.getElementById('fSvc').value;var d=document.getElementById('fData').value;var h=document.getElementById('fHora').value;
