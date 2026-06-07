@@ -47,6 +47,9 @@ h2{font-size:clamp(28px,3.6vw,40px);margin:8px 0 36px}
 .hi{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px}
 .hi b{display:block;color:var(--acc);margin-bottom:4px}
 .hi span{color:var(--mut);font-size:14px}
+.st{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;text-align:center}
+.st b{display:block;font-size:26px;color:var(--acc)}
+.st span{color:var(--mut);font-size:13px}
 .galeria{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;max-width:1150px;margin:0 auto}
 .galeria img{width:100%;height:230px;object-fit:cover;border-radius:14px}
 .rvs{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;max-width:1150px;margin:0 auto}
@@ -71,7 +74,22 @@ footer{border-top:1px solid var(--line);padding:30px 5%;display:flex;justify-con
 footer a{color:var(--acc);text-decoration:none;font-weight:700}
 .wa-f{position:fixed;right:18px;bottom:18px;width:56px;height:56px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 26px -8px #25D366aa;z-index:95}
 .wa-f svg{width:30px;height:30px;fill:#fff}
-html.js .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s,transform .7s}
+header{overflow:hidden}
+header .bgi{animation:kb 16s ease-out both}
+@keyframes kb{from{transform:scale(1.1)}to{transform:scale(1)}}
+@keyframes fup{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+.hin .chip{animation:fup .8s .15s both}
+.hin h1{animation:fup .9s .3s both}
+.hin .sub{animation:fup .9s .5s both}
+.hin .ctas{animation:fup .9s .7s both}
+.ec img,.galeria img{transition:transform .55s ease}
+.ec:hover img{transform:scale(1.07)}
+.galeria img:hover{transform:scale(1.04)}
+.btn.p:active{transform:scale(.97)}
+nav.sc{box-shadow:0 10px 30px -18px rgba(0,0,0,.5)}
+.wa-f{animation:wapulse 2.6s ease-in-out infinite}
+@keyframes wapulse{0%,100%{box-shadow:0 12px 26px -8px #25D366aa}50%{box-shadow:0 12px 32px -4px #25D366cc}}
+html.js .reveal{opacity:0;transform:translateY(26px);transition:opacity .75s cubic-bezier(.2,.7,.3,1),transform .75s cubic-bezier(.2,.7,.3,1)}
 html.js .reveal.in{opacity:1;transform:none}
 @media(max-width:760px){nav .nl a:not(.btn){display:none}section{padding:60px 5%}}
 </style>
@@ -84,12 +102,16 @@ html.js .reveal.in{opacity:1;transform:none}
 <h1 class="dn">O teu melhor amigo,<br><span class="a2">nas melhores mãos.</span></h1>
 <p class="sub">Clínica veterinária, banhos, vacinação e petshop — com a equipa que 231 famílias de Luanda já avaliaram.</p>
 <div class="ctas"><a class="btn p" href="#marcar">Marcar consulta</a><a class="btn o" href="https://wa.me/244925021587" target="_blank">Falar no WhatsApp</a></div></div></header>
+<section style="padding:26px 5%"><div class="wrap" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px"><div class="st reveal"><b class="dn">231</b><span>avaliações no Google</span></div><div class="st reveal"><b class="dn">100</b><span>por cento dedicados aos pets</span></div><div class="st reveal"><b class="dn">7</b><span>dias por semana de cuidado</span></div></div></section>
 <section id="servicos"><div class="wrap"><span class="kick">SERVIÇOS</span><h2 class="dn">Tudo para o teu pet, num só lugar.</h2></div><div class="grid3"><div class="ec reveal"><img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAHMrgsIC0qZivN00pTT0edx0pVV_0p9L5Lq9xW6tdpBZIymCQuM1mUnKrJ2YEmA22sMM6yU_mZMAaaD6DRVYHxvQcRW5IGRWLW6B6zbS7ybezQS9h682DbyJxmeCIQVXwSMBp6MHg=w900-h700-k-no" alt="Consultas & vacinação" loading="lazy"><h3>Consultas & vacinação</h3><p>Avaliação completa, plano de vacinas e desparasitação — com carinho e rigor.</p></div><div class="ec reveal"><img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAGMvRIuFwGJfNY5ui5575U1RblOPnq4VsczrQFpycRTeiU5HnDPEainLwbE6a3qylJ3jdmeoOY70OfcT2Rc87kSUDzJBPOTHh0Dr9LXh3aZEOdzDKT7qiSWGBoxxR8dBdHn6keV=w900-h700-k-no" alt="Banhos & tosquia" loading="lazy"><h3>Banhos & tosquia</h3><p>O teu pet volta para casa limpo, cheiroso e feliz. Marcação pelo WhatsApp.</p></div><div class="ec reveal"><img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAHWHbXJUbnBxZIpUjCx_mAI3-cMP9DS_WZ6Pbj6tzkuURGsQGZZHHn7FUhelUjYHBoYOXV_fy48b_Igx9h6HSRcGBkRGQnkVKMqejeToo89oFClFKRwcWVhINZdjoKcUosOzlK1=w900-h700-k-no" alt="Petshop & farmácia" loading="lazy"><h3>Petshop & farmácia</h3><p>Rações premium, acessórios e medicamentos — fotografado aqui na loja.</p></div></div></section>
 <section id="precos" style="padding-top:30px"><div class="wrap"><span class="kick">PREÇÁRIO</span><h2 class="dn">Valores transparentes.</h2><div class="pi reveal"><div><div class="pn">Consulta veterinária</div></div><div class="pv">desde 12.000 Kz</div></div><div class="pi reveal"><div><div class="pn">Vacinação (por dose)</div></div><div class="pv">desde 9.000 Kz</div></div><div class="pi reveal"><div><div class="pn">Banho + secagem (porte pequeno)</div></div><div class="pv">desde 7.000 Kz</div></div><div class="pi reveal"><div><div class="pn">Banho + tosquia</div></div><div class="pv">desde 12.000 Kz</div></div><div class="pi reveal"><div><div class="pn">Desparasitação</div></div><div class="pv">desde 5.000 Kz</div></div><p class="disc">* Valores de demonstração — a confirmar pela clínica.</p></div></section>
 <section style="padding-top:20px"><div class="wrap"><span class="kick">HORÁRIOS</span><h2 class="dn">Quando estamos cá para ti.</h2></div><div class="hwrap"><div class="hi reveal"><b>Seg–Sex</b><span>08:30 – 18:00</span></div><div class="hi reveal"><b>Sábado</b><span>09:00 – 14:00</span></div><div class="hi reveal"><b>Urgências</b><span>Liga primeiro — orientamos logo</span></div></div></section>
 <section id="galeria" style="padding-top:20px"><div class="wrap"><span class="kick">GALERIA</span><h2 class="dn">Espreita lá para dentro.</h2></div><div class="galeria"><img class="reveal" src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAER25IZRl0-sZ2TGP2eiUEwbwZrj8gwUPpDXvC3P7ls5s9YLxpnMA-aVpMgRidl-n-I1n_VN-gsdxPl6J0gjwqtCds71bAFrAK-y0G7Io0XtjFCAQiSSh7ajWLqudvxDXmYTJb0Yg=w900-h700-k-no" alt="Casa dos Animais" loading="lazy"><img class="reveal" src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAHMrgsIC0qZivN00pTT0edx0pVV_0p9L5Lq9xW6tdpBZIymCQuM1mUnKrJ2YEmA22sMM6yU_mZMAaaD6DRVYHxvQcRW5IGRWLW6B6zbS7ybezQS9h682DbyJxmeCIQVXwSMBp6MHg=w900-h700-k-no" alt="Casa dos Animais" loading="lazy"><img class="reveal" src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAHW6pzX_TLnheJWtKjlPIFE3cDZ5P9tIb1jJoTZTTAf948sWZDxC3SVOxHNsLOoK0MAOk4T_zko8RKb9-quVSSapoubPljyhtlXpsdqXYnX9cntYcluZlnlbJSeKJCDot9arNOduA=w900-h700-k-no" alt="Casa dos Animais" loading="lazy"><img class="reveal" src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAGMvRIuFwGJfNY5ui5575U1RblOPnq4VsczrQFpycRTeiU5HnDPEainLwbE6a3qylJ3jdmeoOY70OfcT2Rc87kSUDzJBPOTHh0Dr9LXh3aZEOdzDKT7qiSWGBoxxR8dBdHn6keV=w900-h700-k-no" alt="Casa dos Animais" loading="lazy"></div></section>
 <section style="padding-top:20px"><div class="wrap"><span class="kick">AVALIAÇÕES</span><h2 class="dn">Quem cá vem, volta.</h2></div><div class="rvs"><div class="rv reveal"><div class="stars">★★★★★</div><p>“A Dra. que considero a veterinária mais competente de Angola!”</p><b>Sandra S.</b></div><div class="rv reveal"><div class="stars">★★★★★</div><p>“Muito bom atendimento, como sempre.”</p><b>Cliente Google</b></div><div class="rv reveal"><div class="stars">★★★★★</div><p>“O lugar ideal para tratar o seu pet.”</p><b>Cliente Google</b></div></div></section>
-<section id="marcar" style="padding-top:20px"><div class="wrap"><span class="kick">MARCAÇÃO ONLINE</span><h2 class="dn">Marca a consulta do teu pet.</h2></div>
+<section style="padding:0 5%"><div class="wrap" style="background:linear-gradient(120deg,var(--acc),var(--acc2));border-radius:20px;padding:38px 34px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap">
+<div><h2 class="dn" style="color:#fff;margin:0 0 6px;font-size:26px">O teu pet merece o melhor.</h2><p style="color:#ffffffd9;font-size:14.5px;margin:0">Marca a consulta, vacina ou banho em 30 segundos — nós cuidamos do resto.</p></div>
+<a class="btn" href="#marcar" style="background:#fff;color:var(--acc);border:none;font-weight:800">Marcar consulta</a></div></section>
+<section id="marcar" style="padding-top:50px"><div class="wrap"><span class="kick">MARCAÇÃO ONLINE</span><h2 class="dn">Marca a consulta do teu pet.</h2></div>
 <div class="formbox"><form id="mf"><div class="fg">
 <div><label>NOME</label><input id="fNome" placeholder="O teu nome" required></div>
 <div><label>SERVIÇO</label><select id="fSvc"><option>Consulta veterinária</option><option>Vacinação</option><option>Banho</option><option>Banho + tosquia</option><option>Desparasitação</option><option>Urgência</option></select></div>
@@ -109,7 +131,10 @@ html.js .reveal.in{opacity:1;transform:none}
 document.documentElement.classList.add('js');
 var NL=String.fromCharCode(10);
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'-8%'});
-document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+document.querySelectorAll('section').forEach(function(sec){var rs=sec.querySelectorAll('.reveal');rs.forEach(function(el,i){el.style.transitionDelay=(i%6)*90+'ms';io.observe(el)})});
+var nv=document.querySelector('nav');window.addEventListener('scroll',function(){nv.classList.toggle('sc',scrollY>40)},{passive:true});
+var cio=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;cio.unobserve(e.target);var el=e.target;var m=(el.textContent||'').match(/^([0-9]{2,4})$/);if(!m)return;var alvo=parseInt(m[1],10);var t0=null;function passo(ts){if(!t0)t0=ts;var p=Math.min((ts-t0)/1200,1);el.textContent=Math.round(alvo*(p<.5?2*p*p:-1+(4-2*p)*p));if(p<1)requestAnimationFrame(passo);else el.textContent=alvo}requestAnimationFrame(passo)})},{threshold:.6});
+document.querySelectorAll('.st b').forEach(function(el){cio.observe(el)});
 setTimeout(function(){document.querySelectorAll('.reveal:not(.in)').forEach(function(el){el.classList.add('in')})},2600);
 document.getElementById('mf').addEventListener('submit',function(ev){ev.preventDefault();
 var n=document.getElementById('fNome').value||'';var s=document.getElementById('fSvc').value;var d=document.getElementById('fData').value;var h=document.getElementById('fHora').value;
