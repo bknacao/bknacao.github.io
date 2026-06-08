@@ -109,6 +109,23 @@ nav{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(11,13,18,.85)
 .contact-links{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:8px}
 footer{padding:28px 0;text-align:center;font-size:13px;color:var(--muted);border-top:1px solid var(--line)}
 @media(max-width:640px){.nav-links{display:none}}
+
+/* VIDEO PLAYERS */
+.thumb video{width:100%;height:100%;object-fit:cover;display:block;background:#000}
+.thumb.vert{aspect-ratio:9/16;max-height:480px}
+.player-note{font-size:12px;color:var(--muted);margin-top:8px}
+
+/* LIGHTBOX GALLERY */
+.lightbox{position:fixed;inset:0;background:rgba(5,6,10,.96);z-index:200;display:none;align-items:center;justify-content:center;flex-direction:column}
+.lightbox.open{display:flex}
+.lightbox img{max-width:92vw;max-height:80vh;border-radius:10px;box-shadow:0 20px 80px rgba(0,0,0,.6);user-select:none}
+.lb-caption{color:var(--muted);font-size:14px;margin-top:16px;text-align:center;max-width:80vw}
+.lb-btn{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.08);border:1px solid var(--line);color:#fff;font-size:26px;width:52px;height:52px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:.2s}
+.lb-btn:hover{background:var(--accent)}
+.lb-prev{left:18px}.lb-next{right:18px}
+.lb-close{position:absolute;top:18px;right:22px;background:none;border:none;color:#fff;font-size:34px;cursor:pointer}
+.lb-count{position:absolute;top:26px;left:26px;color:var(--muted);font-size:14px}
+.gallery-item{cursor:pointer}
 </style>
 </head>
 <body>
@@ -201,7 +218,27 @@ footer{padding:28px 0;text-align:center;font-size:13px;color:var(--muted);border
     <h3 class="cat-title">🎬 Video Editing</h3>
     <div class="work-grid">
       <div class="work">
-        <div class="thumb"><iframe src="https://www.youtube-nocookie.com/embed/WxIlBjDOhYc" title="A Fuga Épica do CEO da Nissan no Japão" loading="lazy" allowfullscreen></iframe></div>
+        <div class="thumb"><video controls preload="none" poster="vid_carlos.jpg" src="doc_carlos_preview.mp4"></video></div>
+        <div class="info">
+          <div class="meta">Long-Form Documentary · Press Play ▶</div>
+          <h3>Animated Documentary Edit</h3>
+          <p>Full-length documentary built with illustrated motion graphics — custom animation, pacing and narration sync from start to finish. 2-minute preview; full film on request.</p>
+          <span class="result">▲ Motion design + long-form editing</span>
+        </div>
+      </div>
+
+      <div class="work">
+        <div class="thumb"><video controls preload="none" poster="vid_cesaria.jpg" src="doc_cesaria_preview.mp4"></video></div>
+        <div class="info">
+          <div class="meta">Long-Form Documentary · Press Play ▶</div>
+          <h3>"Cesária Évora" — Archival Documentary</h3>
+          <p>Biography documentary edited with archival imagery, photo treatments and torn-paper collage effects for emotional storytelling. 2-minute preview; full film on request.</p>
+          <span class="result">▲ Research + archive + emotional pacing</span>
+        </div>
+      </div>
+
+      <div class="work">
+        <div class="thumb"><iframe src="https://www.youtube-nocookie.com/embed/WxIlBjDOhYc" title="The Nissan CEO's Epic Escape" loading="lazy" allowfullscreen></iframe></div>
         <div class="info">
           <div class="meta">Client Channel · YouTube Long-Form</div>
           <h3>"The Nissan CEO's Epic Escape"</h3>
@@ -211,7 +248,7 @@ footer{padding:28px 0;text-align:center;font-size:13px;color:var(--muted);border
       </div>
 
       <div class="work">
-        <div class="thumb"><iframe src="https://www.youtube-nocookie.com/embed/dd-yg8AydQM" title="Como Hackers Usam o WhatsApp para Roubar" loading="lazy" allowfullscreen></iframe></div>
+        <div class="thumb"><iframe src="https://www.youtube-nocookie.com/embed/dd-yg8AydQM" title="How Hackers Use WhatsApp to Steal" loading="lazy" allowfullscreen></iframe></div>
         <div class="info">
           <div class="meta">Client Channel · YouTube Long-Form</div>
           <h3>"How Hackers Use WhatsApp to Steal"</h3>
@@ -221,7 +258,7 @@ footer{padding:28px 0;text-align:center;font-size:13px;color:var(--muted);border
       </div>
 
       <div class="work">
-        <div class="thumb"><iframe src="https://www.youtube-nocookie.com/embed/CPMVIgAd4vI" title="A Fuga Audaciosa de Carlos Ghosn #shorts" loading="lazy" allowfullscreen></iframe></div>
+        <div class="thumb"><iframe src="https://www.youtube-nocookie.com/embed/CPMVIgAd4vI" title="Carlos Ghosn: The Escape #shorts" loading="lazy" allowfullscreen></iframe></div>
         <div class="info">
           <div class="meta">YouTube Shorts · Vertical 9:16</div>
           <h3>"Carlos Ghosn: The Escape, in 60s"</h3>
@@ -239,14 +276,28 @@ footer{padding:28px 0;text-align:center;font-size:13px;color:var(--muted);border
           <span class="result">▲ Editing + design · View work →</span>
         </div>
       </a>
+    </div>
+
+    <!-- ====== SHORT-FORM / REELS ====== -->
+    <h3 class="cat-title">📱 Reels &amp; Short-Form</h3>
+    <div class="work-grid">
+      <div class="work">
+        <div class="thumb vert"><video controls preload="none" poster="vid_bk_NC2.jpg" src="reel_bk.mp4"></video></div>
+        <div class="info">
+          <div class="meta">Instagram Reel · Client: BK-Nação</div>
+          <h3>Client Reel Production</h3>
+          <p>Vertical reel produced for agency clients — hook, captions, pacing and brand consistency. More on the agency's Instagram: <a href="https://www.instagram.com/bk_nacao_/" target="_blank" rel="noopener" style="color:var(--accent)">@bk_nacao_</a></p>
+          <span class="result">▲ Press play ▶ · Made for engagement</span>
+        </div>
+      </div>
 
       <div class="work">
-        <div class="thumb"><img src="vid_GTA_6_Luanda.jpg" alt="GTA 6 Luanda concept video" loading="lazy"></div>
+        <div class="thumb vert"><video controls preload="none" poster="vid_GTA_6_Luanda.jpg" src="reel_gta.mp4"></video></div>
         <div class="info">
           <div class="meta">Creative Concept · Vertical Short</div>
           <h3>"GTA: Luanda" Concept Edit</h3>
           <p>Viral-style concept short imagining GTA set in Luanda — AI-assisted visuals, game-style graphics and trend-driven editing.</p>
-          <span class="result">▲ Trend + AI + editing in one piece</span>
+          <span class="result">▲ Press play ▶ · Trend + AI + editing</span>
         </div>
       </div>
 
@@ -259,70 +310,12 @@ footer{padding:28px 0;text-align:center;font-size:13px;color:var(--muted);border
           <span class="result">▲ Full ad production, one person</span>
         </div>
       </div>
-
-      <div class="work">
-        <div class="thumb"><img src="vid_carlos.jpg" alt="Carlos Ghosn documentary — motion graphics" loading="lazy"></div>
-        <div class="info">
-          <div class="meta">Client Project · Long-Form Documentary</div>
-          <h3>Animated Documentary Edit</h3>
-          <p>Full-length documentary built with illustrated motion graphics — custom animation, pacing and narration sync from start to finish.</p>
-          <span class="result">▲ Motion design + long-form editing</span>
-        </div>
-      </div>
-
-      <div class="work">
-        <div class="thumb"><img src="vid_cesaria.jpg" alt="Cesária Évora documentary — archival storytelling" loading="lazy"></div>
-        <div class="info">
-          <div class="meta">Client Project · Long-Form Documentary</div>
-          <h3>"Cesária Évora" — Archival Documentary</h3>
-          <p>Biography documentary edited with archival imagery, photo treatments and torn-paper collage effects for emotional storytelling.</p>
-          <span class="result">▲ Research + archive + emotional pacing</span>
-        </div>
-      </div>
     </div>
 
     <!-- ====== GRAPHIC DESIGN ====== -->
     <h3 class="cat-title">🎨 Graphic Design</h3>
     <div class="work-grid">
-      <a class="work" href="https://bknacao.net/" target="_blank" rel="noopener">
-        <div class="thumb"><img src="6275965.jpg" alt="Dental implant social media ad" loading="lazy"></div>
-        <div class="info">
-          <div class="meta">Social Media Ad · Client: BK-Nação (bknacao.net)</div>
-          <h3>Dental Clinic Ad Campaign</h3>
-          <p>Paid-ad creative for a dental clinic — bold offer, clean hierarchy and brand-consistent design built to convert.</p>
-          <span class="result">▲ Designed for conversion, not decoration</span>
-        </div>
-      </a>
-
-      <a class="work" href="6730772.jpg" target="_blank" rel="noopener">
-        <div class="thumb"><img src="6730772.jpg" alt="Dentist recruitment poster" loading="lazy"></div>
-        <div class="info">
-          <div class="meta">Poster · Print &amp; Digital</div>
-          <h3>Medical Recruitment Poster</h3>
-          <p>Character illustration, typography and layout for a clinic recruitment campaign — friendly but professional.</p>
-          <span class="result">▲ Illustration + layout + branding</span>
-        </div>
-      </a>
-
-      <a class="work" href="capa1.jpg" target="_blank" rel="noopener">
-        <div class="thumb"><img src="capa1.jpg" alt="Odonto social media cover design" loading="lazy"></div>
-        <div class="info">
-          <div class="meta">Brand Visual · Social Media</div>
-          <h3>Healthcare Brand Cover</h3>
-          <p>Cover design with photography treatment, color grading and typography for a healthcare brand's social presence.</p>
-          <span class="result">▲ Consistent cross-platform identity</span>
-        </div>
-      </a>
-
       <div class="work">
-        <div class="thumb" style="display:flex;align-items:center;justify-content:center;font-size:40px">🏆</div>
+        <div class="thumb"><img class="gallery-item" src="6275965.jpg" alt="Dental implant social media ad" data-caption="Dental Clinic Ad Campaign — paid-ad creative for BK-Nação (bknacao.net)" loading="lazy"></div>
         <div class="info">
-          <div class="meta">Awards · Angola 2016 &amp; Kraków 2019</div>
-          <h3>2× Design Competition Winner</h3>
-          <p>Winner of the national DStv Eutelsat Star Award poster competition (Angola, 2016) and the "PK With My Eyes" award (Cracow University of Technology, 2019).</p>
-          <span class="result">▲ Internationally recognized design</span>
-        </div>
-      </div>
-
-      <a class="work" href="https://youtu.be/WxIlBjDOhYc" target="_blank" rel="noopener">
-        <div class="thumb"><img src="https://i.ytimg
+          <div class="meta
